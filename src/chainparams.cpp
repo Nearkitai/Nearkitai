@@ -56,7 +56,7 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 static void getHardcodedSeeds(std::vector<CAddress> &vSeedsOut)
 {
     std::vector<std::string> ips;
-    ips.push_back("104.248.146.206");
+    ips.push_back("206.189.85.197");
     ips.push_back("68.183.188.139");
 
 
@@ -116,8 +116,8 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x99)(0x75)(0x45)(0xE2).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x99)(0x73)(0x43)(0xE3).convert_to_container<std::vector<unsigned char> >();  
 	
-        vSeeds.push_back(CDNSSeedData("1","68.183.188.139"));
-        vSeeds.push_back(CDNSSeedData("0","206.189.85.197"));
+        vSeeds.push_back(CDNSSeedData("0","68.183.188.139"));
+        vSeeds.push_back(CDNSSeedData("1","206.189.85.197"));
 	convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort); 
 		
         getHardcodedSeeds(vFixedSeeds);
