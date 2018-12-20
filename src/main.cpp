@@ -1406,8 +1406,11 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
     if (pindexBest->nHeight+1 > 0 && pindexBest->nHeight+1 <= 2880) {
         nSubsidy = 1;
     }
-    else if (pindexBest->nHeight+1 > 2880 && pindexBest->nHeight+1 <= 262800) {         
+    else if (pindexBest->nHeight+1 > 2880 && pindexBest->nHeight+1 <= 3600) {         
         nSubsidy = 5 * COIN;
+    }
+    else if (pindexBest->nHeight+1 > 3600 && pindexBest->nHeight+1 <= 262800) {         
+        nSubsidy = 15 * COIN;
     }
     else if (pindexBest->nHeight+1 > 262800 && pindexBest->nHeight+1 <= 284400) {      
         nSubsidy = 20 * COIN;
@@ -4603,7 +4606,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
     if (nHeight < 2880) {
 	ret = 0;                                   
     } else if (nHeight > 2880) {
-	ret = blockValue * 9 / 10 ;       // MN Reward 85%
+	ret = blockValue * 4 / 5 ;       // MN Reward 80%
     }
     return ret;
 }
