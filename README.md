@@ -45,7 +45,8 @@ POW/POS mineable cryptocurrency with Masternodes, based on a secure C11 algorith
 
 ## **Pos Block reward** 
  
-2880-262800   : 5
+2880-3600   : 5
+3600-262800   :15
 262800-284400 : 20
 284400-306000 : 18
 306000-327600 : 16
